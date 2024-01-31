@@ -4,7 +4,7 @@ import torch.nn.functional as F
 from complexLayers import ComplexBatchNorm2d, ComplexConv2d, ComplexLinear, ComplexDropout
 from complexFunctions import complex_relu, complex_max_pool2d
 
-class DoubleKey5(nn.Module):
+class DMNet(nn.Module):
     '''
     optical propagation:
     image1 + image2 = speckles
@@ -27,7 +27,7 @@ class DoubleKey5(nn.Module):
     f_out:  Comlex_fc
     '''
     def __init__(self, in1_dim, in2_dim, out_dim, dropout):
-        super(DoubleKey5, self).__init__()
+        super(DMNet, self).__init__()
         self.in1_dim = in1_dim
         self.in2_dim = in2_dim
         self.out_dim = out_dim
