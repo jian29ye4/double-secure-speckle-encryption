@@ -1,10 +1,6 @@
-from math import pi
-import time
-from re import X
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from torchvision import datasets, transforms
 from complexLayers import ComplexBatchNorm2d, ComplexConv2d, ComplexLinear, ComplexDropout
 from complexFunctions import complex_relu, complex_max_pool2d
 
